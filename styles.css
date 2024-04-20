@@ -1,0 +1,403 @@
+:root {
+  primary-color: #6b7280;
+  primary-color-dark: #6b7280;
+  text-dark: #1f2937;
+  text-light: #6b7280;
+  extra-light: #faf5ff;
+  max-width: 2000px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:aliceblue;
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color:#737373;
+  transition: 0.3s;
+  font-family:Neuropol;
+}
+nav .logo a:hover {
+  color:#000000;
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color:#7C0002;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color:#9AD3E4;
+  border-bottom-color:#9AD3E4;
+  color:darkgray;
+}
+
+
+.section {
+  background-color:#6C6868;
+  display: flex;
+}
+
+.section__container
+{
+  min-height: 60vh;
+  max-width: var(--max-width);
+  margin: 130px;
+  padding: 10px;
+  display: flex;
+  gap: 4rem;
+}
+.section__container1
+{
+  display: grid;
+  grid-template-columns: repeat(2,50%);
+  min-height: 60vh;
+  max-width: 1000px;
+  margin: 130px;
+  padding: 10px;
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.touch{
+  display: block;
+  max-width: 1000px;
+  text-align: center;
+  padding: 2rem;
+
+}
+#log1{
+  width: 100px;
+  height: 100px;
+  border-radius: 1rem;
+  margin-top: 12px;
+  margin-left: 20px;
+}
+
+#log2{
+  width: 125px;
+  height: 125px;
+  border-radius: 1rem;
+}
+.log {
+  padding: 2rem;
+  display: flex;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color:slategrey;
+  margin-bottom: 5rem;
+	
+}
+
+.title span {
+  font-weight: 600;
+	color:#7AA1C4;
+	font-family:Neuropol;
+}
+
+.description {
+  line-height: 1.5rem;
+  color:#291616;
+  margin-bottom: 2rem;
+	font-family:Poppins;
+	
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hire__me {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.portfolio {
+  color:#000000;
+}
+
+.portfolio:hover {
+  background-color:#A8D6E0;
+  color: #706A6A;
+}
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img 
+{
+  width: 250px;
+  height: 380px;
+  box-shadow: 2px 2px 10px;
+	
+  border-radius:150px;
+
+}
+
+@media 
+(width: 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  .section__container
+	{
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns:auto;
+   }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+}
+
+
+
+.section {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+.contact-box {
+  width: 300px;
+  margin: 50px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+.action__btns1 {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns1 button {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 5px 10px;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/*review style*/
+#review{
+  display: flex;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+}
+
+.review .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.review .box-container .box{
+  flex: 1 1 30rem;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+  padding: 3rem 2rem;
+  position: relative;
+  border:.1rem solid rgba(0,0,0,.1);
+
+}
+
+
+.review .box-container .box .fa-quote-right{
+  position: absolute;
+  bottom: 3rem; right: 3rem;
+  font-size: 6rem;
+  color: #eee;
+
+}
+
+.review .box-container .box .stars i{
+  color: var(--pink);
+  font-size: 2rem;
+}
+
+.review .box-container .box p{
+  color: #999;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  padding-top: 2rem;
+}
+
+.review .box-container .box .user{
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+
+}
+
+.review .box-container .box .user img{
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.review .box-container .box .user h3{
+  font-size: 2rem;
+  color: #333;
+}
+
+
+.review .box-container .box .user span{
+  font-size: 1.5rem;
+  color: #999;
+}
